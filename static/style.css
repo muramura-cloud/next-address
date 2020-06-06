@@ -1,0 +1,385 @@
+@charset "UTF-8";
+html {
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Helvetica, Meiryo, メイリオ, sans-serif;
+  font-size: 1rem;
+}
+
+.btn {
+  font-size: 3rem;
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: tomato;
+  border: solid 2px tomato;
+  border-radius: 3px;
+  transition: 0.4s;
+}
+.btn:hover {
+  background: tomato;
+  color: white;
+}
+@media (max-width: 768px) {
+  .btn {
+    font-size: 2rem;
+  }
+}
+
+.linkbox {
+  text-align: center;
+  padding: 30px;
+}
+
+.header {
+  padding: 90px 0 60px;
+}
+
+.header-h1 {
+  text-align: center;
+  font-weight: bold;
+}
+@media (min-width: 1024px) {
+  .header-h1 {
+    font-size: 5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .login {
+    text-align: right;
+    margin-right: 40px;
+  }
+  .login span {
+    font-size: 2rem;
+  }
+  .login .account {
+    margin-right: 57px;
+  }
+}
+@media (max-width: 768px) {
+  .login {
+    text-align: center;
+  }
+}
+
+.addressBox,
+.msgBox {
+  list-style: none;
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  .addressBox,
+.msgBox {
+    padding: 30px;
+  }
+  .addressBox li,
+.msgBox li {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: tomato;
+    border-left: solid 6px tomato;
+    background: #ffe5e0;
+    margin-bottom: 3px;
+    line-height: 1.5;
+    padding: 0.5em;
+    font-weight: bold;
+  }
+  .addressBox li p,
+.msgBox li p {
+    font-size: 3rem;
+    margin-right: 3rem;
+    margin-bottom: 0;
+  }
+  .addressBox li button,
+.msgBox li button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30%;
+    font-size: 1.5rem;
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: tomato;
+    border: solid 2px tomato;
+    border-radius: 3px;
+    transition: 0.4s;
+  }
+  .addressBox li button:hover,
+.msgBox li button:hover {
+    background: tomato;
+    color: white;
+  }
+  .addressBox li .deleteBtn,
+.msgBox li .deleteBtn {
+    right: 23%;
+  }
+  .addressBox li b,
+.addressBox li label,
+.msgBox li b,
+.msgBox li label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 2%;
+    color: black;
+  }
+}
+@media (max-width: 768px) {
+  .addressBox,
+.msgBox {
+    padding: 10px;
+  }
+  .addressBox li,
+.msgBox li {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: tomato;
+    border-left: solid 6px tomato;
+    background: #ffe5e0;
+    margin-bottom: 3px;
+    line-height: 1.5;
+    padding: 0.5em;
+    font-weight: bold;
+  }
+  .addressBox li p,
+.msgBox li p {
+    font-size: 1.5rem;
+    margin-right: 3rem;
+    margin-bottom: 0;
+  }
+  .addressBox li button,
+.msgBox li button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20%;
+    font-size: 1rem;
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: tomato;
+    border: solid 2px tomato;
+    border-radius: 3px;
+    transition: 0.4s;
+  }
+  .addressBox li button:hover,
+.msgBox li button:hover {
+    background: tomato;
+    color: white;
+  }
+  .addressBox li .deleteBtn,
+.msgBox li .deleteBtn {
+    right: 5%;
+  }
+  .addressBox li b,
+.addressBox li label,
+.msgBox li b,
+.msgBox li label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 2%;
+    color: black;
+  }
+}
+
+.addressTable,
+.addTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.5rem;
+}
+.addressTable tr,
+.addTable tr {
+  border-bottom: solid 2px white;
+}
+.addressTable tr:last-child,
+.addTable tr:last-child {
+  border-bottom: none;
+}
+.addressTable th,
+.addTable th {
+  position: relative;
+  text-align: left;
+  width: 30%;
+  background-color: tomato;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+.addressTable th:after,
+.addTable th:after {
+  display: block;
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  top: calc(50% - 10px);
+  right: -10px;
+  border-left: 10px solid tomato;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+.addressTable td,
+.addTable td {
+  width: 70%;
+  text-align: center;
+  background-color: #eee;
+  padding: 10px 0;
+  font-weight: bold;
+}
+.addressTable td button,
+.addTable td button {
+  font-size: 1.5rem;
+}
+
+.msgSendTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.5rem;
+}
+.msgSendTable tr {
+  border-bottom: solid 2px white;
+}
+.msgSendTable tr:last-child {
+  border-bottom: none;
+}
+@media (max-width: 768px) {
+  .msgSendTable tr {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.msgSendTable th {
+  position: relative;
+  text-align: left;
+  width: 30%;
+  background-color: tomato;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+.msgSendTable th:after {
+  display: block;
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  top: calc(50% - 10px);
+  right: -10px;
+  border-left: 10px solid tomato;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+@media (max-width: 768px) {
+  .msgSendTable th:after {
+    right: calc(50% - 10px);
+    top: 100%;
+    border-left: 10px solid transparent;
+    border-top: 10px solid tomato;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid transparent;
+  }
+}
+.msgSendTable td {
+  text-align: center;
+  background-color: #eee;
+  padding: 10px 0;
+  font-weight: bold;
+}
+.msgSendTable td button {
+  font-size: 1.5rem;
+}
+@media (max-width: 768px) {
+  .msgSendTable td {
+    width: 100%;
+    padding: 30px 15px 10px;
+  }
+  .msgSendTable td input {
+    width: 300px;
+  }
+}
+
+.showMsgTitle {
+  position: relative;
+  text-align: center;
+  padding: 30px 0;
+  font-weight: bold;
+  font-size: 3rem;
+  color: tomato;
+  background-color: #eee;
+}
+.showMsgTitle:after {
+  display: block;
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  right: calc(50% - 10px);
+  bottom: -20px;
+  border-top: 10px solid #eee;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+@media (max-width: 768px) {
+  .showMsgTitle {
+    font-size: 1.5rem;
+  }
+}
+
+.pagenationBox {
+  padding: 0;
+}
+.pagenationBox button {
+  font-size: 1.5rem;
+  margin-right: 5px;
+}
+
+.noMsg {
+  text-align: center;
+  padding: 30px 0;
+  font-weight: bold;
+  font-size: 3rem;
+  color: tomato;
+  background-color: #eee;
+}
+@media (max-width: 768px) {
+  .noMsg {
+    font-size: 1.5rem;
+  }
+}
+
+.footer {
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  .footer {
+    padding: 60px 0;
+    font-size: 2rem;
+    color: white;
+    background-color: tomato;
+  }
+}
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 0 10px;
+    font-size: 1.5rem;
+    color: white;
+    background-color: tomato;
+  }
+}
