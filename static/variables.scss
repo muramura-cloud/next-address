@@ -1,0 +1,22 @@
+@charset 'UTF-8';
+
+//幅関係の設定
+
+
+//フォント関係の設定
+$font-size: 62.5%;
+$font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Helvetica, Meiryo, メイリオ, sans-serif;
+
+//色関係の設定
+
+//ブレイクポイント
+$sp: 768px;
+$pc: 1024px;
+
+//余白調整
+$spaceClass: false !default;
+$spacePsdding: false !default;
+$endValue: 10 !default;
+
+//プレフィックス
+$set-prefix: '',-moz-,-webkit-,-ms-;

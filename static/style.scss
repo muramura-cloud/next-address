@@ -1,0 +1,306 @@
+@charset 'UTF-8';
+@import "variables.scss";
+@import "mixin.scss";
+@import "setting.scss";
+
+.header {
+    padding: 90px 0 60px;
+}
+.header-h1 {
+    text-align: center;
+    font-weight: bold;
+    @include pc() {
+        font-size: 5rem;
+    }
+}
+
+.login {
+    @include pc() {
+        text-align: right;
+        margin-right: 40px;
+        span {
+            font-size: 2rem;
+        }
+        .account {
+            margin-right: 57px;
+        }
+    }
+    @include sp() {
+        text-align: center;
+    }
+}
+
+.addressBox,
+.msgBox {
+    list-style: none;
+    text-align: center;
+    @include pc() {
+        padding: 30px;
+        li {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: tomato;
+            border-left: solid 6px tomato;
+            background: lighten(tomato, 30%);
+            margin-bottom: 3px;
+            line-height: 1.5;
+            padding: 0.5em;
+            font-weight: bold;
+            p {
+                font-size: 3rem;
+                margin-right: 3rem;
+                margin-bottom: 0;
+            }
+            button {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 30%;
+                font-size: 1.5rem;
+                display: inline-block;
+                padding: 5px 10px;
+                text-decoration: none;
+                color: tomato;
+                border: solid 2px tomato;
+                border-radius: 3px;
+                transition: 0.4s;
+                &:hover {
+                    background: tomato;
+                    color: white;
+                }
+            }
+            .deleteBtn {
+                right: 23%;
+            }
+            b,
+            label {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 2%;
+                color: black;
+            }
+        }
+    }
+    @include sp() {
+        padding: 10px;
+        li {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: tomato;
+            border-left: solid 6px tomato;
+            background: lighten(tomato, 30%);
+            margin-bottom: 3px;
+            line-height: 1.5;
+            padding: 0.5em;
+            font-weight: bold;
+            p {
+                font-size: 1.5rem;
+                margin-right: 3rem;
+                margin-bottom: 0;
+            }
+            button {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 20%;
+                font-size: 1rem;
+                display: inline-block;
+                padding: 5px 10px;
+                text-decoration: none;
+                color: tomato;
+                border: solid 2px tomato;
+                border-radius: 3px;
+                transition: 0.4s;
+                &:hover {
+                    background: tomato;
+                    color: white;
+                }
+            }
+            .deleteBtn {
+                right: 5%;
+            }
+            b,
+            label {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 2%;
+                color: black;
+            }
+        }
+    }
+}
+
+.addressTable,
+.addTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.5rem;
+    tr {
+        border-bottom: solid 2px white;
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    th {
+        position: relative;
+        text-align: left;
+        width: 30%;
+        background-color: tomato;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        &:after {
+            display: block;
+            content: "";
+            width: 0px;
+            height: 0px;
+            position: absolute;
+            top: calc(50% - 10px);
+            right: -10px;
+            border-left: 10px solid tomato;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+        }
+    }
+    td {
+        width: 70%;
+        text-align: center;
+        background-color: #eee;
+        padding: 10px 0;
+        font-weight: bold;
+        button {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.msgSendTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.5rem;
+    tr {
+        border-bottom: solid 2px white;
+        &:last-child {
+            border-bottom: none;
+        }
+        @include sp() {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    th {
+        position: relative;
+        text-align: left;
+        width: 30%;
+        background-color: tomato;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        &:after {
+            display: block;
+            content: "";
+            width: 0px;
+            height: 0px;
+            position: absolute;
+            top: calc(50% - 10px);
+            right: -10px;
+            border-left: 10px solid tomato;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            @include sp() {
+                right: calc(50% - 10px);
+                top: 100%;
+                border-left: 10px solid transparent;
+                border-top: 10px solid tomato;
+                border-bottom: 10px solid transparent;
+                border-right: 10px solid transparent;
+            }
+        }
+    }
+    td {
+        text-align: center;
+        background-color: #eee;
+        padding: 10px 0;
+        font-weight: bold;
+        button {
+            font-size: 1.5rem;
+        }
+        @include sp() {
+            width: 100%;
+            padding: 30px 15px 10px;
+            input {
+                width: 300px;
+            }
+        }
+    }
+}
+
+.showMsgTitle {
+    position: relative;
+    text-align: center;
+    padding: 30px 0;
+    font-weight: bold;
+    font-size: 3rem;
+    color: tomato;
+    background-color: #eee;
+    &:after {
+        display: block;
+        content: "";
+        width: 0px;
+        height: 0px;
+        position: absolute;
+        right: calc(50% - 10px);
+        bottom: -20px;
+        border-top: 10px solid #eee;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+    }
+    @include sp() {
+        font-size: 1.5rem;
+    }
+}
+
+.pagenationBox {
+    padding: 0;
+    button {
+        font-size: 1.5rem;
+        margin-right: 5px;
+    }
+}
+
+.noMsg {
+    text-align: center;
+    padding: 30px 0;
+    font-weight: bold;
+    font-size: 3rem;
+    color: tomato;
+    background-color: #eee;
+    @include sp() {
+        font-size: 1.5rem;
+    }
+}
+
+.footer {
+    text-align: center;
+    @include pc() {
+        padding: 60px 0;
+        font-size: 2rem;
+        color: white;
+        background-color: tomato;
+    }
+    @include sp() {
+        padding: 30px 0 10px;
+        font-size: 1.5rem;
+        color: white;
+        background-color: tomato;
+    }
+}
